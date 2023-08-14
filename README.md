@@ -1,0 +1,7 @@
+The goal of this project is to implement a simple auction on the ethereum blockchain platform so that every address can submit its offer and pay the same amount of money and the money is blocked. After the end of the auction time, the person who made a higher bid wins the auction and the other people's money is released.
+1- At the time of deployment, an address is specified as the auction manager, as well as the duration of the auction.
+2- Bid() function: the user participates in the auction by calling this function and specifying msg.value as the bid figure.
+3- auctionEnd() function: by calling it, if the auction time is over, it announces the winner and returns the deposit for other users, and the amount of money offered by the winner is deposited into the manager's account.
+4- cancellation() function: if the auction has not yet ended, anyone who has made a bid can cancel this way. If a person withdraws, his money will be blocked until the end of the auction, but if he is the winner of the auction, we will remove him and replace the previous person.
+5- HighestBidIncreased event: if the bid number is changed, the address of the bidder and its amount will be determined by this event.
+6- AuctionEnded event: After the end of the auction, the winner and the bid amount will be announced by this event.
